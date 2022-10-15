@@ -32,7 +32,10 @@ export default function Navbar(props) {
             <li className="nav-item">
               <Link
                 className={`nav-link ${
-                  location.pathname === "/first-app" ? "active" : ""
+                  location.pathname === "/first-app" ||
+                  location.pathname === "/first-app/"
+                    ? "active"
+                    : ""
                 }`}
                 aria-current="page"
                 to="/first-app"
