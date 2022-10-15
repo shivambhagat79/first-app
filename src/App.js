@@ -49,7 +49,7 @@ function App() {
         <Routes>
           <Route
             exact
-            path="/"
+            path="/first-app"
             element={
               <TextForm
                 mode={mode}
@@ -58,7 +58,7 @@ function App() {
               />
             }
           />
-          <Route exact path="/about" element={<About />} />
+          <Route exact path="/first-app/about" element={<About />} />
         </Routes>
       </Router>
     </>

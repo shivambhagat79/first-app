@@ -10,7 +10,10 @@ export default function Navbar(props) {
       className={`navbar navbar-${props.mode} navbar-expand-lg bg-${props.mode}`}
     >
       <div className="container-fluid">
-        <Link className={`navbar-brand text-${props.colorTheme}`} to="/">
+        <Link
+          className={`navbar-brand text-${props.colorTheme}`}
+          to="/first-app"
+        >
           {props.title}
         </Link>
         <button
@@ -32,7 +35,7 @@ export default function Navbar(props) {
                   location.pathname === "/" ? "active" : ""
                 }`}
                 aria-current="page"
-                to="/"
+                to="/first-app"
               >
                 Home
               </Link>
@@ -42,7 +45,7 @@ export default function Navbar(props) {
                 className={`nav-link ${
                   location.pathname === "/about" ? "active" : ""
                 }`}
-                to="/about"
+                to="/first-app/about"
               >
                 About
               </Link>
