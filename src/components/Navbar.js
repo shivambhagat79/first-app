@@ -39,6 +39,9 @@ export default function Navbar(props) {
                 }`}
                 aria-current="page"
                 to="/first-app"
+                onClick={() => {
+                  document.title = "TextUtils | Home";
+                }}
               >
                 Home
               </Link>
@@ -49,6 +52,9 @@ export default function Navbar(props) {
                   location.pathname === "/first-app/about" ? "active" : ""
                 }`}
                 to="/first-app/about"
+                onClick={() => {
+                  document.title = "TextUtils | About";
+                }}
               >
                 About
               </Link>
