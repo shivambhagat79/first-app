@@ -108,48 +108,56 @@ export default function TextForm(props) {
           <button
             className={`btn btn-${props.colorTheme} me-2 mb-2`}
             onClick={handleUpperCase}
+            disabled={text.length === 0}
           >
             Upper Case
           </button>
           <button
             className={`btn btn-${props.colorTheme} me-2 mb-2`}
             onClick={handleLowerCase}
+            disabled={text.length === 0}
           >
             Lower Case
           </button>
           <button
             className={`btn btn-${props.colorTheme} me-2 mb-2`}
             onClick={handleInverseCase}
+            disabled={text.length === 0}
           >
             Inverse Case
           </button>
           <button
             className={`btn btn-${props.colorTheme} me-2 mb-2`}
             onClick={handleCapitalisedCase}
+            disabled={text.length === 0}
           >
             Capitalised Case
           </button>
           <button
             className={`btn btn-${props.colorTheme} me-2 mb-2`}
             onClick={handleAlternateCase}
+            disabled={text.length === 0}
           >
             Alternate Case
           </button>
           <button
             className={`btn btn-${props.colorTheme} me-2 mb-2`}
             onClick={handleExtraSpaces}
+            disabled={text.length === 0}
           >
             Remove Extra Spaces
           </button>
           <button
             className={`btn btn-${props.colorTheme} me-2 mb-2`}
             onClick={handleCopy}
+            disabled={text.length === 0}
           >
             Copy Text
           </button>
           <button
             className={`btn btn-${props.colorTheme} me-2 mb-2`}
             onClick={handleClear}
+            disabled={text.length === 0}
           >
             Clear
           </button>
@@ -160,11 +168,11 @@ export default function TextForm(props) {
             Your Text has <strong>{wordCount}</strong> words and{" "}
             <strong>{text.length}</strong> characters
           </p>
-          <p>It can be read in {wordCount * 0.008} Minutes</p>
-          <h2>Preview</h2>
           <p>
-            {text.length > 0 ? text : "Enter something to preview it here."}
+            It can be read in <strong>{wordCount * 0.008} Minutes</strong>
           </p>
+          <h2>Preview</h2>
+          <p>{text.length > 0 ? text : "Nothing to preview here."}</p>
         </div>
       </div>
     </>

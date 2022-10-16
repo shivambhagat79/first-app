@@ -58,7 +58,11 @@ function App() {
               />
             }
           />
-          <Route exact path="/first-app/about" element={<About />} />
+          <Route
+            exact
+            path="/first-app/about"
+            element={<About mode={mode} colorTheme={colorTheme} />}
+          />
         </Routes>
       </Router>
     </>
